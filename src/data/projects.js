@@ -26,7 +26,7 @@ export const projects = [
     liveUrl: 'https://ace-meklit.netlify.app/',
     githubUrl: 'https://github.com/petrossisay1646/ACE-Meklit',
     featured: true,
-    image: '/projects/ace-meklit.png',
+    image: '/projects/ace-meklit.webp',
     color: '#3b82f6',
   },
   {
@@ -50,7 +50,7 @@ export const projects = [
     liveUrl: 'https://melodic-hummingbird-fdca26.netlify.app/',
     githubUrl: 'https://github.com/petrossisay1646/Apple-website',
     featured: true,
-    image: '/projects/apple-website.png',
+    image: '/projects/apple-website.webp',
     color: '#60a5fa',
   },
   {
@@ -75,7 +75,7 @@ export const projects = [
     liveUrl: null,
     githubUrl: 'https://github.com/petrossisay1646/GroupChatApp',
     featured: true,
-    image: '/projects/group-chat-app.png',
+    image: '/projects/group-chat-app.webp',
     color: '#f59e0b',
   },
   {
@@ -99,7 +99,7 @@ export const projects = [
     liveUrl: null,
     githubUrl: 'https://github.com/petrossisay1646/StudentRegisterSystem',
     featured: false,
-    image: '/projects/student-registration.png',
+    image: '/projects/student-registration.webp',
     color: '#22c55e',
   },
   {
@@ -122,7 +122,7 @@ export const projects = [
     liveUrl: 'https://frolicking-entremet-b5f6f4.netlify.app/',
     githubUrl: 'https://github.com/petrossisay1646/puppy-lovers-page',
     featured: false,
-    image: '/projects/puppy-lovers.png',
+    image: '/projects/puppy-lovers.webp',
     color: '#a78bfa',
   },
   {
@@ -145,7 +145,7 @@ export const projects = [
     liveUrl: 'https://beamish-pavlova-feadd8.netlify.app/',
     githubUrl: null,
     featured: false,
-    image: '/projects/portfolio-v1.png',
+    image: '/projects/portfolio-v1.webp',
     color: '#06b6d4',
   },
   {
@@ -171,7 +171,7 @@ export const projects = [
     liveUrl: 'https://petros-portfolio-one.vercel.app',
     githubUrl: 'https://github.com/petrossisay1646/petros-portfolio',
     featured: true,
-    image: '/projects/portfolio-v2.png',
+    image: '/projects/portfolio-v2.webp',
     color: '#8b5cf6',
   },
 ];
