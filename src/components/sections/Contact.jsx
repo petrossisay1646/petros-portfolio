@@ -83,7 +83,7 @@ export default function Contact({ onTriggerToast }) {
     } catch (err) {
       console.error('Contact form error:', err);
       if (onTriggerToast) {
-        onTriggerToast('Could not send message. Please email petrossisay1646@gmail.com directly.', 'error');
+        onTriggerToast('Could not send message. Please email petrossisay7164@gmail.com directly.', 'error');
       }
     } finally {
       setSending(false);

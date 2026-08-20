@@ -18,7 +18,7 @@ export const siteConfig = {
   status: 'Open to Internships & Junior Roles',
 
   // Social & Contact Links
-  email: 'petrossisay1646@gmail.com',
+  email: 'petrossisay7164@gmail.com',
   github: 'https://github.com/petrossisay1646',
   githubUsername: 'petrossisay1646',
   linkedin: 'https://www.linkedin.com/in/petros-sisay-gelan',
@@ -29,8 +29,8 @@ export const siteConfig = {
   cvPath: '/cv.pdf',
   profilePhoto: '/profile.jpg',
 
-  // Active contact endpoint sending real emails to petrossisay1646@gmail.com
-  contactEndpoint: 'https://formsubmit.co/ajax/petrossisay1646@gmail.com',
+  // Active contact endpoint sending real emails to petrossisay7164@gmail.com
+  contactEndpoint: 'https://formsubmit.co/ajax/petrossisay7164@gmail.com',
 
   // Meta SEO
   metaTitle: 'Petros Sisay Gelan — Software Engineering Student & Full-Stack Developer',
