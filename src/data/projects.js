@@ -48,7 +48,7 @@ export const projects = [
     ],
     tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'REST API'],
     category: ['fullstack', 'personal'],
-    liveUrl: null,
+    liveUrl: 'https://mern-todo-pro.vercel.app',
     githubUrl: 'https://github.com/petrossisay1646/mern-todo-pro',
     featured: true,
     image: '/projects/mern-todo-pro.webp',
