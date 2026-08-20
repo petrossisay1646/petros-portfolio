@@ -1,9 +1,59 @@
 // ═══════════════════════════════════════════════════════════════════
 // PROJECTS DATA — Petros Sisay Gelan Portfolio
-// Updated with screenshots and new projects
+// Updated with AdamaMaterials, MERN Todo Pro, screenshots & mockups
 // ═══════════════════════════════════════════════════════════════════
 
 export const projects = [
+  {
+    id: 'adama-materials',
+    title: 'AdamaMaterials E-Commerce Platform',
+    tagline: 'Full-Stack TypeScript marketplace for construction materials & building supplies.',
+    description:
+      'A modern e-commerce web application engineered with TypeScript and React for cataloging, searching, and purchasing construction supplies with shopping cart and category filtering.',
+    longDescription:
+      'AdamaMaterials E-Commerce is designed to solve procurement logistics for regional construction supplies around Adama/ASTU. It features strict TypeScript type-safety, modular component architecture, dynamic category filtering, search algorithms, and client-side shopping cart state management.',
+    problem: 'Local contractors and builders needed an organized digital catalog to discover, compare prices, and order construction materials online.',
+    solution: 'Engineered a high-performance TypeScript and React web application with responsive layout, real-time product search, and stateful cart management.',
+    features: [
+      'Strict TypeScript type checking for robust product models',
+      'Dynamic product search and multi-category filtering',
+      'Interactive shopping cart drawer with quantity calculations',
+      'Responsive product grid with high-DPI image cards',
+      'Clean modular UI architecture designed for scalability',
+    ],
+    tech: ['TypeScript', 'React', 'JavaScript', 'E-Commerce', 'CSS Modules'],
+    category: ['frontend', 'fullstack', 'personal'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/petrossisay1646/AdamaMaterials-E-commerce-',
+    featured: true,
+    image: '/projects/adama-materials.webp',
+    color: '#38bdf8',
+  },
+  {
+    id: 'mern-todo-pro',
+    title: 'MERN Todo Pro Productivity Suite',
+    tagline: 'Full-Stack MERN sprint board and task management application with REST API.',
+    description:
+      'A full-stack productivity web application built on the MERN stack (MongoDB, Express, React, Node.js) featuring complete CRUD operations, user task prioritization, and RESTful API endpoints.',
+    longDescription:
+      'MERN Todo Pro delivers a Kanban-style task organization dashboard where users can track sprint items, assign priority levels, update completion statuses, and persist data seamlessly across MongoDB database collections through an Express/Node backend.',
+    problem: 'Needed a responsive, reliable full-stack task manager capable of managing daily engineering workflows with real database persistence.',
+    solution: 'Architected a complete MERN application with modular Express routing, MongoDB schema design via Mongoose, and a reactive React state-driven frontend.',
+    features: [
+      'Full-Stack CRUD operations connected to MongoDB database',
+      'RESTful Express.js backend API with JSON data serialization',
+      'Sprint status boards (To Do, In Progress, Completed)',
+      'Priority tags and task categorization',
+      'Optimistic UI state updates in React',
+    ],
+    tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'REST API'],
+    category: ['fullstack', 'personal'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/petrossisay1646/mern-todo-pro',
+    featured: true,
+    image: '/projects/mern-todo-pro.webp',
+    color: '#10b981',
+  },
   {
     id: 'ace-meklit',
     title: 'ACE Meklit Business Website',
@@ -167,7 +217,7 @@ export const projects = [
       'Deployed on Vercel with optimized production build',
     ],
     tech: ['React', 'Vite', 'CSS Modules', 'JavaScript'],
-    category: ['frontend', 'personal'],
+    category: ['frontend', 'fullstack', 'personal'],
     liveUrl: 'https://petros-portfolio-one.vercel.app',
     githubUrl: 'https://github.com/petrossisay1646/petros-portfolio',
     featured: true,
@@ -178,6 +228,7 @@ export const projects = [
 
 export const filterCategories = [
   { id: 'all', label: 'All Projects' },
+  { id: 'fullstack', label: 'Full-Stack' },
   { id: 'frontend', label: 'Frontend' },
   { id: 'java', label: 'Java' },
   { id: 'academic', label: 'Academic' },
