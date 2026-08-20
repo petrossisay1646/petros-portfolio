@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petros Sisay Gelan — CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .cv-wrapper {
+      display: flex;
+      width: 794px;
+      min-height: 1123px;
+      background: #fff;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+    }
+
+    /* ── LEFT SIDEBAR ── */
+    .sidebar {
+      width: 260px;
+      min-height: 100%;
+      background: #1a2035;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .photo-wrap {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #3b82f6;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+      background: #2a3550;
+    }
+
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #3b82f6;
+      background: #0e1526;
+    }
+
+    .sidebar-name {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .sidebar-title {
+      font-size: 0.8rem;
+      color: #3b82f6;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .sidebar-section {
+      width: 100%;
+      margin-bottom: 1.75rem;
+    }
+
+    .sidebar-section-title {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #fff;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 0.35rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.78rem;
+      color: #a0aec0;
+      margin-bottom: 0.55rem;
+      line-height: 1.4;
+    }
+
+    .contact-item .icon {
+      font-size: 0.85rem;
+      color: #3b82f6;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .contact-item a {
+      color: #a0aec0;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .contact-item a:hover {
+      color: #3b82f6;
+    }
+
+    .skill-item, .lang-item, .hobby-item {
+      font-size: 0.8rem;
+      color: #a0aec0;
+      margin-bottom: 0.45rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .skill-item::before, .hobby-item::before {
+      content: '○';
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+    }
+
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 1rem;
+    }
+
+    .lang-item::before {
+      content: '○';
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+    }
+
+    .lang-item span {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* ── RIGHT MAIN CONTENT ── */
+    .main-content {
+      flex: 1;
+      padding: 2.5rem 2.25rem;
+      background: #fff;
+    }
+
+    .main-section {
+      margin-bottom: 2rem;
+    }
+
+    .main-section-title {
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #1a2035;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .profile-text {
+      font-size: 0.875rem;
+      color: #4a5568;
+      line-height: 1.75;
+      text-align: justify;
+    }
+
+    .exp-item {
+      margin-bottom: 1.25rem;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.1rem;
+    }
+
+    .exp-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #1a2035;
+    }
+
+    .exp-date {
+      font-size: 0.78rem;
+      color: #6b7280;
+      white-space: nowrap;
+    }
+
+    .exp-company {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-bottom: 0.55rem;
+    }
+
+    .exp-bullets {
+      padding-left: 1.25rem;
+    }
+
+    .exp-bullets li {
+      font-size: 0.82rem;
+      color: #4a5568;
+      margin-bottom: 0.3rem;
+      line-height: 1.5;
+    }
+
+    .edu-item {
+      margin-bottom: 1.25rem;
+    }
+
+    .edu-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #1a2035;
+      margin-bottom: 0.15rem;
+    }
+
+    .edu-date {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-bottom: 0.2rem;
+    }
+
+    .edu-institution {
+      font-size: 0.82rem;
+      color: #4a5568;
+      font-style: italic;
+    }
+
+    .project-item {
+      margin-bottom: 1rem;
+      padding-left: 0.75rem;
+      border-left: 3px solid #3b82f6;
+    }
+
+    .project-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1a2035;
+    }
+
+    .project-tech {
+      font-size: 0.75rem;
+      color: #3b82f6;
+      font-weight: 500;
+      margin: 0.15rem 0;
+    }
+
+    .project-desc {
+      font-size: 0.8rem;
+      color: #4a5568;
+      line-height: 1.45;
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: none; padding: 0; }
+      .cv-wrapper { box-shadow: none; width: 100%; }
+      .print-btn { display: none; }
+    }
+
+    .print-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: #3b82f6;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      z-index: 100;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .print-btn:hover { background: #2563eb; }
+  </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">⬇ Save as PDF</button>
+
+<div class="cv-wrapper">
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <div class="photo-wrap">
+      <img
+        src="/profile.jpg"
+        alt="Petros Sisay Gelan"
+        onerror="this.parentElement.innerHTML='<div class=\'photo-placeholder\'>PG</div>'"
+      />
+    </div>
+
+    <h1 class="sidebar-name">Petros Sisay Gelan</h1>
+    <p class="sidebar-title">Software Engineering Student</p>
+
+    <!-- CONTACT -->
+    <div class="sidebar-section">
+      <h2 class="sidebar-section-title">Contact</h2>
+      <div class="contact-item">
+        <span class="icon">✉</span>
+        <a href="mailto:petrossisay7164@gmail.com">petrossisay7164@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="icon">⌂</span>
+        <span>Adama, Ethiopia</span>
+      </div>
+      <div class="contact-item">
+        <span class="icon">⌘</span>
+        <a href="https://github.com/petrossisay1646" target="_blank">github.com/petrossisay1646</a>
+      </div>
+      <div class="contact-item">
+        <span class="icon">in</span>
+        <a href="https://linkedin.com/in/petros-sisay-gelan" target="_blank">linkedin.com/in/petros-sisay-gelan</a>
+      </div>
+      <div class="contact-item">
+        <span class="icon">✈</span>
+        <span>@Petros_sisay (Telegram)</span>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="sidebar-section">
+      <h2 class="sidebar-section-title">Skills</h2>
+      <div class="skill-item">HTML5 / CSS3</div>
+      <div class="skill-item">JavaScript (ES6+)</div>
+      <div class="skill-item">React.js</div>
+      <div class="skill-item">Node.js</div>
+      <div class="skill-item">Java & OOP</div>
+      <div class="skill-item">JDBC / Java Swing</div>
+      <div class="skill-item">MySQL / SQL</div>
+      <div class="skill-item">Database Design</div>
+      <div class="skill-item">REST API Concepts</div>
+      <div class="skill-item">Git / GitHub</div>
+      <div class="skill-item">Responsive Web Design</div>
+    </div>
+
+    <!-- LANGUAGES -->
+    <div class="sidebar-section">
+      <h2 class="sidebar-section-title">Languages</h2>
+      <div class="lang-item">Amharic <span>Native</span></div>
+      <div class="lang-item">English <span>Proficient</span></div>
+      <div class="lang-item">Afaan Oromo <span>Proficient</span></div>
+    </div>
+
+    <!-- INTERESTS -->
+    <div class="sidebar-section">
+      <h2 class="sidebar-section-title">Interests</h2>
+      <div class="hobby-item">Open Source Development</div>
+      <div class="hobby-item">Software Architecture</div>
+      <div class="hobby-item">Problem Solving</div>
+      <div class="hobby-item">Football / Chess</div>
+    </div>
+  </aside>
+
+  <!-- RIGHT MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- PROFILE -->
+    <section class="main-section">
+      <h2 class="main-section-title">Profile</h2>
+      <p class="profile-text">
+        I am a 3rd Year Software Engineering student at Adama Science and Technology University (ASTU), Ethiopia,
+        passionate about building practical software that solves real problems. I have strong experience in
+        full-stack web development using React, Node.js, and MySQL, as well as desktop application development
+        using Java and JDBC. I am a disciplined learner with a drive to write clean, maintainable code,
+        and I actively seek internship and junior developer opportunities to grow into a professional software engineer.
+      </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="main-section">
+      <h2 class="main-section-title">Education</h2>
+
+      <div class="edu-item">
+        <div class="edu-title">B.Sc. Software Engineering</div>
+        <div class="edu-date">2023 – Present (Expected 2027)</div>
+        <div class="edu-institution">Adama Science and Technology University (ASTU), Adama, Ethiopia</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-title">Ethiopian University Entrance Certificate</div>
+        <div class="edu-date">2022</div>
+        <div class="edu-institution">Ethiopia</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS (as experience) -->
+    <section class="main-section">
+      <h2 class="main-section-title">Projects & Work</h2>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-title">ACE Meklit — Business Website</div>
+          <div class="exp-date">2024</div>
+        </div>
+        <div class="exp-company">Freelance Project · HTML5, CSS3, JavaScript</div>
+        <ul class="exp-bullets">
+          <li>Designed and built a fully responsive multi-section business website from scratch</li>
+          <li>Implemented mobile-first layout with CSS Grid, Flexbox, and smooth scroll navigation</li>
+          <li>Deployed and maintained the site on Netlify with optimized load performance</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-title">Java Multi-Client Group Chat Application</div>
+          <div class="exp-date">2024</div>
+        </div>
+        <div class="exp-company">Academic + Personal Project · Java, TCP Sockets, Multithreading</div>
+        <ul class="exp-bullets">
+          <li>Built a real-time group chat system supporting multiple concurrent clients via TCP socket server</li>
+          <li>Implemented multi-threaded connection handling, message broadcasting, and Java Swing desktop UI</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-title">Student Registration System</div>
+          <div class="exp-date">2024</div>
+        </div>
+        <div class="exp-company">Academic Project · Java, JDBC, MySQL, Java Swing</div>
+        <ul class="exp-bullets">
+          <li>Developed a full CRUD Java desktop application connected to MySQL via JDBC</li>
+          <li>Designed relational database schema with input validation and structured record management</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-title">Personal Portfolio Website (v2)</div>
+          <div class="exp-date">2025</div>
+        </div>
+        <div class="exp-company">Personal Project · React, CSS Modules, Vite</div>
+        <ul class="exp-bullets">
+          <li>Engineered production-quality SPA with dark/light theme, command palette, and scroll animations</li>
+          <li>Implemented component architecture with custom hooks, centralized data management, and responsive design</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS SUMMARY -->
+    <section class="main-section">
+      <h2 class="main-section-title">Technical Summary</h2>
+      <p class="profile-text">
+        <strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+), React.js, Responsive Web Design, DOM API &nbsp;|&nbsp;
+        <strong>Backend:</strong> Node.js, Java Servlets/JSP, REST API Concepts, Apache Tomcat &nbsp;|&nbsp;
+        <strong>Database:</strong> MySQL, SQL, Database Schema Design, JDBC, MySQL Workbench &nbsp;|&nbsp;
+        <strong>Java:</strong> Java Core/OOP, JDBC, Java Swing, JavaFX, Maven &nbsp;|&nbsp;
+        <strong>Tools:</strong> Git, GitHub, VS Code, IntelliJ IDEA, Vite, WAMP
+      </p>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>

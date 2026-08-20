@@ -1,0 +1,157 @@
+.footer {
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.logoMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-xs);
+  background-color: var(--accent-light);
+  border: 1px solid var(--border-accent);
+  color: var(--accent-primary);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.logoText {
+  display: flex;
+  align-items: center;
+}
+
+.logoDot {
+  color: var(--accent-primary);
+}
+
+.role {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.school {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+}
+
+.colTitle {
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.linkList a {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.linkList a:hover {
+  color: var(--accent-primary);
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-card-alt);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.iconLink:hover {
+  color: var(--accent-primary);
+  border-color: var(--border-accent);
+  transform: translateY(-2px);
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.825rem;
+  color: var(--text-muted);
+}
+
+.copyright {
+  margin: 0;
+}
+
+.topBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.topBtn:hover {
+  color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .topRow {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bottomRow {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}

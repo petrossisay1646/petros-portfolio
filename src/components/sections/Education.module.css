@@ -1,0 +1,137 @@
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-md);
+  margin-top: 2.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: border-color var(--transition-fast);
+}
+
+.card:hover {
+  border-color: var(--border-accent);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background-color: var(--accent-light);
+  border: 1px solid var(--border-accent);
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.headerText {
+  flex: 1;
+}
+
+.headerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.degreeTitle {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.badgeProgress {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-primary);
+  background-color: var(--accent-light);
+  border: 1px solid var(--border-accent);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.uniName {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  margin-top: 0.2rem;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.65rem;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.academicDesc {
+  font-size: 0.975rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-top: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.coursesBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.coursesTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+}
+
+.courseTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 1.5rem;
+  }
+  .cardHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .headerTop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+  .metaRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+}
