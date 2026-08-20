@@ -8,7 +8,7 @@ export const siteConfig = {
   initials: 'PG',
   title: 'Software Engineering Student & Full-Stack Developer',
   tagline: 'Building thoughtful digital experiences and practical software solutions.',
-  bio: "I'm a 3rd Year Software Engineering Student at Adama Science and Technology University (ASTU) in Ethiopia. I build frontend web applications, Java desktop/web software, and database systems with a focus on clean code, responsiveness, and practical problem solving.",
+  bio: "I'm a 3rd Year Software Engineering Student at Adama Science and Technology University (ASTU) in Ethiopia. I build frontend web applications, full-stack systems, Java desktop software, and relational database systems with a focus on clean code, responsiveness, and practical problem solving.",
 
   // Identity & Specs
   location: 'Adama, Ethiopia',
@@ -18,7 +18,7 @@ export const siteConfig = {
   status: 'Open to Internships & Junior Roles',
 
   // Social & Contact Links
-  email: 'petrossisay7164@gmail.com',
+  email: 'petrossisay1646@gmail.com',
   github: 'https://github.com/petrossisay1646',
   githubUsername: 'petrossisay1646',
   linkedin: 'https://www.linkedin.com/in/petros-sisay-gelan',
@@ -29,9 +29,8 @@ export const siteConfig = {
   cvPath: '/cv.pdf',
   profilePhoto: '/profile.jpg',
 
-  // Optional contact service endpoint (e.g. Formspree / EmailJS)
-  // Form fallback triggers interactive simulation toast when empty
-  contactEndpoint: '',
+  // Active contact endpoint sending real emails to petrossisay1646@gmail.com
+  contactEndpoint: 'https://formsubmit.co/ajax/petrossisay1646@gmail.com',
 
   // Meta SEO
   metaTitle: 'Petros Sisay Gelan — Software Engineering Student & Full-Stack Developer',

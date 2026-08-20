@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Send, Copy, Check, MessageSquare } from 'lucide-react';
+import { Mail, Send, Copy, Check, MessageSquare, AlertCircle } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../common/Icons';
 import { siteConfig } from '../../data/config';
 import { useIntersection } from '../../hooks/useIntersection';
@@ -48,24 +48,42 @@ export default function Contact({ onTriggerToast }) {
 
     try {
       if (siteConfig.contactEndpoint) {
+        const payload = {
+          name: form.name,
+          email: form.email,
+          _replyto: form.email,
+          _subject: `[Portfolio Inquiry] ${form.subject} — from ${form.name}`,
+          message: form.message,
+          _captcha: 'false',
+          _template: 'table',
+        };
+
         const response = await fetch(siteConfig.contactEndpoint, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(form),
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(payload),
         });
-        if (!response.ok) throw new Error('Form submission failed');
+
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok && data.success !== 'true') {
+          throw new Error(data.message || 'Form submission failed');
+        }
       } else {
-        // Simulate network delay for submission feedback
+        // Fallback simulation
         await new Promise(res => setTimeout(res, 1000));
       }
 
       if (onTriggerToast) {
-        onTriggerToast('Message sent successfully! Petros will get back to you soon.', 'success');
+        onTriggerToast('Message sent! It will arrive in Petros\'s inbox shortly.', 'success');
       }
       setForm({ name: '', email: '', subject: '', message: '' });
     } catch (err) {
+      console.error('Contact form error:', err);
       if (onTriggerToast) {
-        onTriggerToast('Could not send message. Please try again or email directly.', 'error');
+        onTriggerToast('Could not send message. Please email petrossisay1646@gmail.com directly.', 'error');
       }
     } finally {
       setSending(false);
@@ -231,7 +249,7 @@ export default function Contact({ onTriggerToast }) {
                 className={styles.submitBtn}
               >
                 <MessageSquare size={16} />
-                <span>{sending ? 'Sending Message...' : 'Send Message'}</span>
+                <span>{sending ? 'Sending to Inbox...' : 'Send Message'}</span>
               </button>
             </form>
           </div>
